@@ -54,6 +54,7 @@ func connectToMongoDB() (*mongo.Client, error) {
 	return client, nil
 }
 
+
 // HashPassword generates a hashed password using bcrypt
 func HashPassword(password string) (string, error) {
 	hash, err := bcrypt.GenerateFromPassword([]byte(password), bcrypt.DefaultCost)
